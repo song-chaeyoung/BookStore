@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./page.module.css";
-// import { FaSearch } from "react-icons/fa";
-// import { useRouter } from "next/navigation";
 import SearchForm from "@/components/searchForm";
+import { BookData } from "@/types";
+import BookItem from "@/components/book-item";
 
 // export const dynamic = "force-dynamic";
 
@@ -22,10 +22,13 @@ const Page = async () => {
 
   return (
     <div className={style.container}>
-      <h1>검색하실 책을 입력해주세요</h1>
-      <SearchForm />
       <div className={style.books}>
         <h1>모든 책 보기</h1>
+        <div className={style.bookList}>
+          {books.map((it: BookData) => (
+            <BookItem key={it.id} book={it} />
+          ))}
+        </div>
       </div>
     </div>
   );

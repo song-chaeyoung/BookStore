@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <link rel="icon" href="" />
+        {/* <link rel="icon" href="" /> */}
         <title>BookStore</title>
       </head>
       <body>

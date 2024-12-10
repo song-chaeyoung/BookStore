@@ -1,13 +1,18 @@
 import React from "react";
-import styles from "./header.module.css";
+import style from "./header.module.css";
 import { BsList } from "react-icons/bs";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.logo}>채영북스</div>
-      <div className={styles.list}>
-        <BsList />
+    <header className={style.header}>
+      <div className={style.inner}>
+        <Link href="/">
+          <div className={style.logo}>채영북스</div>
+        </Link>
+        <div className={style.list}>
+          <BsList />
+        </div>
       </div>
     </header>
   );
